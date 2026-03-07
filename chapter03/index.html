@@ -1,0 +1,2594 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="사회문제라는 맥락 위에서 알고리즘 기초개념을 탄탄하게 쌓는 학생용 AIDT 교재로, 코딩 없이 손으로 직접 해보며 문제 분해, 정렬, 탐색 알고리즘의 핵심 원리를 체득합니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="../chapter02/">
+      
+      
+        <link rel="next" href="../chapter04/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>학습 준비 — 웹 언플러그드 활동 체험하기 - 알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT" class="md-header__button md-logo" aria-label="알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              학습 준비 — 웹 언플러그드 활동 체험하기
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - 알고리즘이 바꾸는 세상 — 단원 도입
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter04/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - 문제 분해와 모델링 — 복잡한 문제를 쪼개고 구조화하기
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter08/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - 정렬 알고리즘 — 데이터를 순서대로 정리하는 방법
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter14/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - 탐색 알고리즘 — 원하는 데이터를 효율적으로 찾는 방법
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter18/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 - 단원 마무리 — 알고리즘으로 세상을 바꾸다
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT" class="md-nav__button md-logo" aria-label="알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    알고리즘으로 세상을 바꾸다 — 고등학교 정보 3단원 알고리즘 AIDT
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - 알고리즘이 바꾸는 세상 — 단원 도입
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - 알고리즘이 바꾸는 세상 — 단원 도입
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    알고리즘, 왜 배울까? — 세상을 바꾸는 절차의 힘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    컴퓨팅으로 해결할 수 있는 문제란? — 문제의 상태 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학습 준비 — 웹 언플러그드 활동 체험하기
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학습 준비 — 웹 언플러그드 활동 체험하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 언플러그드 활동이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 알고리즘 시각화 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: VisuAlgo 소개
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: CS Unplugged 소개
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: VisuAlgo 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: VisuAlgo에서 정렬 시각화 체험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: VisuAlgo 속도 조절하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: CS Unplugged 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: CS Unplugged 이진 탐색 체험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 도구 비교 및 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 전체 활동 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 사이트 주소를 잘못 입력하는 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 애니메이션이 너무 빨라서 놓치는 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: 영어 때문에 이해가 어려운 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 인터넷 연결 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제 (O/X 퀴즈)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        응용 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 점검
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 더 해보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 1: 다른 정렬 알고리즘 비교하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 2: CS Unplugged 이진수 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 3: 나만의 배열로 실험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 다음 장으로
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 핵심 개념 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - 문제 분해와 모델링 — 복잡한 문제를 쪼개고 구조화하기
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - 문제 분해와 모델링 — 복잡한 문제를 쪼개고 구조화하기
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚑 응급실의 선택 — 문제 분해란 무엇인가
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚑 핵심만 남기기 — 추상화의 힘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 재난 속 대피경로 — 모델링으로 구조화하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 1차시·2차시 통합 정리 — 문제 분해에서 모델링까지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - 정렬 알고리즘 — 데이터를 순서대로 정리하는 방법
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - 정렬 알고리즘 — 데이터를 순서대로 정리하는 방법
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♻️ 재활용 데이터 정리 — 정렬이 왜 필요할까?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♻️ 거품처럼 떠오르는 정렬 — 버블 정렬 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♻️ 카드를 끼워 넣듯이 — 삽입 정렬 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏙️ 스마트시티 교통 데이터 — 퀵 정렬과 분할 정복
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏙️ 어떤 정렬이 더 빠를까? — 빅오 표기법과 성능 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시·4차시 통합 정리 — 정렬 알고리즘 총정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - 탐색 알고리즘 — 원하는 데이터를 효율적으로 찾는 방법
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - 탐색 알고리즘 — 원하는 데이터를 효율적으로 찾는 방법
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍱 취약계층 지원 대상 찾기 — 순차 탐색의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍱 반씩 줄여가며 찾기 — 이진 탐색의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏥 신약 데이터에서 후보 찾기 — 탐색 성능 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏥 5차시·6차시 통합 정리 — 탐색 알고리즘 총정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - 단원 마무리 — 알고리즘으로 세상을 바꾸다
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 - 단원 마무리 — 알고리즘으로 세상을 바꾸다
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    알고리즘 단원 종합 정리 — 핵심 개념 한눈에 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    최종 미션 — 나만의 사회문제에 알고리즘 적용하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 언플러그드 활동이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 알고리즘 시각화 도구
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: VisuAlgo 소개
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: CS Unplugged 소개
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: VisuAlgo 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: VisuAlgo에서 정렬 시각화 체험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-visualgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: VisuAlgo 속도 조절하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: CS Unplugged 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: CS Unplugged 이진 탐색 체험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 도구 비교 및 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 전체 활동 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 사이트 주소를 잘못 입력하는 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 애니메이션이 너무 빨라서 놓치는 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: 영어 때문에 이해가 어려운 경우
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 인터넷 연결 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제 (O/X 퀴즈)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        응용 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 점검
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 더 해보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 1: 다른 정렬 알고리즘 비교하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cs-unplugged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 2: CS Unplugged 이진수 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도전 과제 3: 나만의 배열로 실험하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 다음 장으로
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 핵심 개념 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">학습 준비 — 웹 언플러그드 활동 체험하기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">🎯 이 장에서 배우는 것<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 웹 기반 언플러그드 활동(클릭/드래그)의 사용 방법을 익힐 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VisuAlgo 사이트에서 정렬 알고리즘 시각화를 조작할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CS Unplugged 사이트에서 이진 탐색 활동을 체험할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 앞으로의 차시에서 활용할 학습 도구를 미리 탐색하고 준비할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_3">💡 왜 이걸 배우나요?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>여러분은 지금부터 <strong>알고리즘</strong>이라는 새로운 세계를 탐험하게 됩니다. 그런데 알고리즘은 눈에 보이지 않는 '절차'와 '논리'로 이루어져 있어서, 처음 접하면 막막하게 느껴질 수 있어요.</p>
+<blockquote>
+<p><strong>생각해보기:</strong> 축구 경기 규칙을 글로만 읽는 것과, 실제 경기 영상을 보면서 배우는 것 중 어떤 게 더 이해가 잘 될까요?</p>
+</blockquote>
+<p>알고리즘도 마찬가지입니다! <strong>시각화 도구</strong>를 활용하면 복잡한 정렬 과정이 어떻게 진행되는지 눈으로 직접 확인할 수 있고, <strong>인터랙티브 활동</strong>을 통해 손으로 조작하며 원리를 체득할 수 있습니다.</p>
+<p>이번 시간은 본격적인 알고리즘 학습에 앞서 <strong>도구 사용법을 익히는 준비 운동</strong> 시간입니다. 마치 수영을 배우기 전에 물에 먼저 들어가 적응하는 것처럼, 앞으로 계속 사용할 웹 도구들과 친해지는 시간을 가져봅시다.</p>
+<div class="mermaid">flowchart LR
+    A[추상적 개념] --&gt; B[시각화 도구]
+    B --&gt; C[눈으로 확인]
+    C --&gt; D[손으로 조작]
+    D --&gt; E[깊은 이해]
+
+    style A fill:#ffcccc
+    style E fill:#ccffcc</div>
+<hr />
+<h2 id="_4">📚 핵심 개념<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="1">개념 1: 언플러그드 활동이란?<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>'언플러그드(Unplugged)'는 '플러그를 뽑은'이라는 뜻입니다. 원래는 컴퓨터 없이 종이, 카드, 몸동작 등을 활용해 컴퓨터 과학의 원리를 배우는 활동을 말해요. 마치 기타리스트가 전자 장비 없이 통기타만으로 연주하는 '언플러그드 공연'처럼요!</p>
+<p><strong>정확한 정의</strong></p>
+<ul>
+<li><strong>전통적 언플러그드 활동</strong>: 컴퓨터 없이 물리적 도구(카드, 종이 등)로 컴퓨터 과학 원리를 학습하는 방법</li>
+<li><strong>웹 언플러그드 활동</strong>: 전통적 언플러그드 활동을 웹 브라우저에서 클릭, 드래그 등으로 체험할 수 있도록 디지털화한 것</li>
+</ul>
+<p><strong>예시로 확인</strong></p>
+<div class="mermaid">flowchart TB
+    subgraph 전통적["전통적 언플러그드"]
+        A1[실제 카드 정렬하기]
+        A2[종이에 이진수 표현하기]
+        A3[친구들과 네트워크 역할극]
+    end
+
+    subgraph 웹["웹 언플러그드"]
+        B1[화면의 카드 드래그하기]
+        B2[버튼 클릭으로 이진수 변환]
+        B3[시뮬레이션으로 네트워크 체험]
+    end
+
+    전통적 -.-&gt;|디지털화| 웹</div>
+<blockquote>
+<p><strong>알아보기:</strong> 웹 언플러그드의 장점은 언제 어디서나 혼자서도 반복 학습이 가능하다는 점입니다. 실수해도 리셋 버튼 하나로 처음부터 다시 시작할 수 있어요!</p>
+</blockquote>
+<hr />
+<h3 id="2">개념 2: 알고리즘 시각화 도구<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>요리 레시피를 읽는 것과 요리 과정을 담은 영상을 보는 것, 어떤 게 더 이해하기 쉬울까요? 알고리즘 시각화 도구는 '알고리즘 레시피'를 '영상'처럼 보여주는 도구입니다.</p>
+<p><strong>정확한 정의</strong></p>
+<p><strong>알고리즘 시각화(Algorithm Visualization)</strong> 도구는 알고리즘의 실행 과정을 그래픽, 애니메이션, 색상 변화 등으로 표현하여 학습자가 각 단계를 직관적으로 이해할 수 있게 돕는 소프트웨어입니다.</p>
+<p><strong>주요 시각화 도구 소개</strong></p>
+<ul>
+<li><strong>VisuAlgo</strong>: 싱가포르 국립대학교에서 개발한 알고리즘 시각화 플랫폼. 정렬, 탐색, 그래프 등 다양한 알고리즘을 애니메이션으로 학습</li>
+<li><strong>Algorithm Visualizer</strong>: 다양한 알고리즘을 단계별로 시각화하며 코드와 함께 보여줌</li>
+<li><strong>CS Unplugged</strong>: 뉴질랜드에서 시작된 언플러그드 교육 프로젝트의 공식 웹사이트</li>
+</ul>
+<p><strong>예시로 확인</strong></p>
+<p>버블 정렬 과정을 시각화 도구로 보면:</p>
+<div class="mermaid">flowchart LR
+    subgraph 단계1["1단계"]
+        direction LR
+        A1["5"] --&gt; A2["3"]
+        A2 --&gt; A3["8"]
+        A3 --&gt; A4["1"]
+    end
+
+    subgraph 단계2["비교 중"]
+        direction LR
+        B1["3"]:::highlight --&gt; B2["5"]:::highlight
+        B2 --&gt; B3["8"]
+        B3 --&gt; B4["1"]
+    end
+
+    subgraph 단계3["교환 완료"]
+        direction LR
+        C1["3"] --&gt; C2["5"]
+        C2 --&gt; C3["1"]:::highlight
+        C3 --&gt; C4["8"]:::highlight
+    end
+
+    classDef highlight fill:#ffeb3b</div>
+<p>숫자들이 비교되고, 위치가 바뀌는 과정이 색상 변화와 애니메이션으로 실시간 표시됩니다!</p>
+<hr />
+<h3 id="3-visualgo">개념 3: VisuAlgo 소개<a class="headerlink" href="#3-visualgo" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>VisuAlgo는 '알고리즘 놀이공원'과 같습니다. 정렬, 탐색, 그래프 등 다양한 '놀이기구(알고리즘)'가 있고, 여러분은 원하는 놀이기구를 골라 직접 체험할 수 있어요.</p>
+<p><strong>정확한 정의</strong></p>
+<p><strong>VisuAlgo</strong>는 싱가포르 국립대학교(NUS)의 Steven Halim 교수팀이 개발한 무료 알고리즘 학습 플랫폼입니다. 정렬, 연결 리스트, 이진 트리, 그래프 탐색 등 30개 이상의 자료구조와 알고리즘을 인터랙티브 애니메이션으로 제공합니다.</p>
+<p><strong>VisuAlgo의 주요 기능</strong></p>
+<ul>
+<li><strong>속도 조절</strong>: 애니메이션 속도를 느리게/빠르게 조절</li>
+<li><strong>단계별 실행</strong>: 한 단계씩 버튼을 눌러 진행</li>
+<li><strong>입력 데이터 변경</strong>: 원하는 숫자 배열로 직접 실험</li>
+<li><strong>한국어 지원</strong>: 설정에서 한국어로 변경 가능</li>
+</ul>
+<p><strong>접속 주소</strong>: https://visualgo.net</p>
+<div class="mermaid">flowchart TB
+    A[VisuAlgo 접속] --&gt; B{카테고리 선택}
+    B --&gt; C[Sorting 정렬]
+    B --&gt; D[Linked List 연결 리스트]
+    B --&gt; E[Binary Search Tree 이진 탐색 트리]
+    B --&gt; F[Graph 그래프]
+
+    C --&gt; G[버블/삽입/퀵 정렬 등]
+    G --&gt; H[▶ 재생 버튼으로 시작]</div>
+<hr />
+<h3 id="4-cs-unplugged">개념 4: CS Unplugged 소개<a class="headerlink" href="#4-cs-unplugged" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>CS Unplugged는 '컴퓨터 과학 체험관'입니다. 박물관에서 전시물을 직접 만지고 조작해보듯이, 컴퓨터 과학의 핵심 개념들을 게임처럼 체험할 수 있어요.</p>
+<p><strong>정확한 정의</strong></p>
+<p><strong>CS Unplugged</strong>는 뉴질랜드 캔터베리 대학교에서 시작된 컴퓨터 과학 교육 프로젝트입니다. 원래 컴퓨터 없이 진행하는 활동들을 모아놓은 것인데, 현재는 웹에서 체험할 수 있는 인터랙티브 버전도 제공합니다.</p>
+<p><strong>주요 활동 영역</strong></p>
+<ul>
+<li><strong>이진수</strong>: 카드 뒤집기로 이진법 이해</li>
+<li><strong>이미지 표현</strong>: 픽셀과 비트맵 원리</li>
+<li><strong>오류 검출</strong>: 패리티 비트로 오류 찾기</li>
+<li><strong>탐색 알고리즘</strong>: 숫자 찾기 게임으로 이진 탐색 체험</li>
+<li><strong>정렬 네트워크</strong>: 비교 연산 시각화</li>
+</ul>
+<p><strong>접속 주소</strong>: https://www.csunplugged.org</p>
+<hr />
+<h2 id="_5">🔨 따라하기<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>준비물</strong>: 인터넷이 연결된 컴퓨터 또는 태블릿, 웹 브라우저(크롬 권장)</p>
+</blockquote>
+<h3 id="step-1-visualgo">Step 1: VisuAlgo 접속하기<a class="headerlink" href="#step-1-visualgo" title="Permanent link">&para;</a></h3>
+<p><strong>1-1. 웹 브라우저를 열고 주소창에 입력하세요</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://visualgo.net
+</span></code></pre></div>
+<p><strong>1-2. 메인 화면 확인하기</strong></p>
+<p>접속하면 다양한 알고리즘 카테고리가 카드 형태로 나열된 화면이 보입니다.</p>
+<div class="mermaid">flowchart TB
+    subgraph 메인화면["VisuAlgo 메인 화면"]
+        A[Sorting&lt;br&gt;정렬]
+        B[Linked List&lt;br&gt;연결 리스트]
+        C[Hash Table&lt;br&gt;해시 테이블]
+        D[BST&lt;br&gt;이진 탐색 트리]
+        E[... 더 많은 항목들]
+    end</div>
+<p><strong>1-3. 한국어로 변경하기 (선택사항)</strong></p>
+<p>화면 우측 상단의 언어 설정에서 'Korean(한국어)'을 선택하면 설명이 한국어로 표시됩니다.</p>
+<blockquote>
+<p><strong>정리하기:</strong> VisuAlgo는 무료이며 회원가입 없이 바로 사용할 수 있습니다!</p>
+</blockquote>
+<hr />
+<h3 id="step-2-visualgo">Step 2: VisuAlgo에서 정렬 시각화 체험하기<a class="headerlink" href="#step-2-visualgo" title="Permanent link">&para;</a></h3>
+<p><strong>2-1. Sorting(정렬) 메뉴 클릭</strong></p>
+<p>메인 화면에서 <strong>"Sorting"</strong> 카드를 클릭하세요.</p>
+<p><strong>2-2. 화면 구성 이해하기</strong></p>
+<p>정렬 페이지는 크게 세 영역으로 구성됩니다:</p>
+<div class="mermaid">flowchart TB
+    subgraph 상단["① 컨트롤 영역"]
+        A1[Create 배열 생성]
+        A2[Sort 정렬 시작]
+        A3[◀ ▶ 단계 이동]
+    end
+
+    subgraph 중앙["② 시각화 영역"]
+        B1[막대 그래프로&lt;br&gt;숫자 배열 표시]
+    end
+
+    subgraph 하단["③ 설명 영역"]
+        C1[현재 진행 중인&lt;br&gt;단계 설명]
+    end
+
+    상단 --&gt; 중앙 --&gt; 하단</div>
+<p><strong>2-3. 새로운 배열 만들기</strong></p>
+<ol>
+<li>상단의 <strong>"Create"</strong> 버튼 클릭</li>
+<li><strong>"Random"</strong> 선택하여 무작위 숫자 배열 생성</li>
+<li>또는 <strong>"User Defined"</strong>를 선택해 직접 숫자 입력 (예: <code>5,3,8,1,9,2</code>)</li>
+</ol>
+<p><strong>2-4. 버블 정렬 실행해보기</strong></p>
+<ol>
+<li><strong>"Sort"</strong> 버튼 클릭</li>
+<li>드롭다운 메뉴에서 <strong>"Bubble Sort"</strong> 선택</li>
+<li><strong>"Go"</strong> 또는 재생 버튼(▶) 클릭</li>
+</ol>
+<p><strong>2-5. 애니메이션 관찰하기</strong></p>
+<ul>
+<li>두 개의 막대가 <strong>노란색</strong>으로 변하면 → 현재 비교 중</li>
+<li>막대 위치가 바뀌면 → 교환(swap) 발생</li>
+<li>막대가 <strong>초록색</strong>으로 변하면 → 정렬 완료된 위치</li>
+</ul>
+<blockquote>
+<p><strong>생각해보기:</strong> 버블 정렬에서 가장 큰 숫자는 어디로 이동하나요? 애니메이션을 보며 확인해보세요!</p>
+</blockquote>
+<hr />
+<h3 id="step-3-visualgo">Step 3: VisuAlgo 속도 조절하기<a class="headerlink" href="#step-3-visualgo" title="Permanent link">&para;</a></h3>
+<p>애니메이션이 너무 빠르거나 느리다면 속도를 조절할 수 있습니다.</p>
+<p><strong>3-1. 속도 조절 방법</strong></p>
+<ul>
+<li>화면 하단 또는 설정 영역에서 <strong>슬라이더</strong> 찾기</li>
+<li>왼쪽으로 이동 = 느리게 (천천히 관찰할 때)</li>
+<li>오른쪽으로 이동 = 빠르게 (전체 흐름 파악할 때)</li>
+</ul>
+<p><strong>3-2. 단계별 실행 방법</strong></p>
+<p>한 단계씩 직접 진행하고 싶다면:</p>
+<ol>
+<li>재생 버튼 대신 <strong>"Step"</strong> 버튼 또는 <strong>▶|</strong> 버튼 사용</li>
+<li>클릭할 때마다 한 단계씩 진행</li>
+<li>각 단계에서 무슨 일이 일어나는지 하단 설명 확인</li>
+</ol>
+<div class="mermaid">sequenceDiagram
+    participant 사용자
+    participant VisuAlgo
+
+    사용자-&gt;&gt;VisuAlgo: Step 버튼 클릭
+    VisuAlgo-&gt;&gt;사용자: 1단계 실행 + 설명 표시
+    사용자-&gt;&gt;VisuAlgo: Step 버튼 클릭
+    VisuAlgo-&gt;&gt;사용자: 2단계 실행 + 설명 표시
+    Note over 사용자,VisuAlgo: 원하는 만큼 반복</div>
+<hr />
+<h3 id="step-4-cs-unplugged">Step 4: CS Unplugged 접속하기<a class="headerlink" href="#step-4-cs-unplugged" title="Permanent link">&para;</a></h3>
+<p><strong>4-1. 웹 브라우저에서 접속</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://www.csunplugged.org
+</span></code></pre></div>
+<p><strong>4-2. 메인 화면 탐색</strong></p>
+<p>CS Unplugged 웹사이트는 다양한 주제별 활동을 제공합니다.</p>
+<div class="mermaid">flowchart LR
+    A[CS Unplugged] --&gt; B[Topics 주제별 활동]
+    A --&gt; C[Resources 교육 자료]
+    A --&gt; D[At Home 가정 학습]
+
+    B --&gt; B1[Binary Numbers 이진수]
+    B --&gt; B2[Sorting Networks 정렬]
+    B --&gt; B3[Searching Algorithms 탐색]</div>
+<p><strong>4-3. 인터랙티브 활동 찾기</strong></p>
+<ol>
+<li>메뉴에서 <strong>"Topics"</strong> 또는 <strong>"Interactives"</strong> 클릭</li>
+<li><strong>"Binary Numbers"</strong> (이진수) 활동 선택</li>
+<li>카드를 클릭하여 이진수를 만들어보는 활동 체험</li>
+</ol>
+<hr />
+<h3 id="step-5-cs-unplugged">Step 5: CS Unplugged 이진 탐색 체험하기<a class="headerlink" href="#step-5-cs-unplugged" title="Permanent link">&para;</a></h3>
+<p><strong>5-1. Searching Algorithms 활동 찾기</strong></p>
+<p>CS Unplugged에서 제공하는 탐색 관련 인터랙티브 활동을 찾아봅시다.</p>
+<blockquote>
+<p><strong>알아보기:</strong> 정확한 메뉴 구조는 사이트 업데이트에 따라 달라질 수 있습니다. "Searching" 또는 "Binary Search"로 검색해보세요.</p>
+</blockquote>
+<p><strong>5-2. 숫자 찾기 게임 원리</strong></p>
+<p>이진 탐색의 원리를 체험하는 활동입니다:</p>
+<div class="mermaid">flowchart TB
+    A[1~100 중 숨겨진 숫자 찾기] --&gt; B{중간값 50과 비교}
+    B --&gt;|"더 크다"| C[51~100 범위로 축소]
+    B --&gt;|"더 작다"| D[1~49 범위로 축소]
+    C --&gt; E{중간값 75와 비교}
+    D --&gt; F{중간값 25와 비교}
+    E --&gt; G[...반복...]
+    F --&gt; G
+    G --&gt; H[정답 발견!]</div>
+<p><strong>5-3. 체험 방법</strong></p>
+<ol>
+<li>화면에 1부터 특정 숫자까지의 카드가 뒤집어져 있음</li>
+<li>중간 카드를 클릭하여 확인</li>
+<li>힌트(더 큼/더 작음)를 보고 범위를 절반으로 줄임</li>
+<li>최소한의 시도로 목표 숫자 찾기!</li>
+</ol>
+<hr />
+<h3 id="step-6">Step 6: 도구 비교 및 정리<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<p>두 도구를 체험해보았으니, 각각의 특징을 정리해봅시다.</p>
+<p><strong>VisuAlgo의 특징</strong></p>
+<ul>
+<li>알고리즘 실행 과정을 <strong>애니메이션</strong>으로 시각화</li>
+<li><strong>코드와 연계</strong>하여 학습 가능</li>
+<li>정렬, 탐색, 그래프 등 <strong>다양한 알고리즘</strong> 제공</li>
+<li>속도 조절, 단계별 실행 등 <strong>세밀한 컨트롤</strong> 가능</li>
+</ul>
+<p><strong>CS Unplugged의 특징</strong></p>
+<ul>
+<li>컴퓨터 과학의 <strong>핵심 원리</strong>에 집중</li>
+<li><strong>게임처럼</strong> 즐기며 학습</li>
+<li><strong>개념 이해</strong>에 초점 (코드 없이도 가능)</li>
+<li>오프라인 활동과 <strong>연계</strong> 가능</li>
+</ul>
+<div class="mermaid">flowchart LR
+    subgraph VisuAlgo
+        A1[코드 중심]
+        A2[애니메이션]
+        A3[세부 단계 확인]
+    end
+
+    subgraph CSUnplugged["CS Unplugged"]
+        B1[원리 중심]
+        B2[게임/활동]
+        B3[개념 이해]
+    end
+
+    VisuAlgo ---|"함께 활용"| CSUnplugged</div>
+<hr />
+<h2 id="_6">📝 전체 활동 요약<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>이번 시간에 수행한 활동을 순서대로 정리하면:</p>
+<div class="mermaid">flowchart TB
+    A[1. VisuAlgo 접속] --&gt; B[2. 정렬 메뉴 선택]
+    B --&gt; C[3. 랜덤 배열 생성]
+    C --&gt; D[4. 버블 정렬 실행]
+    D --&gt; E[5. 애니메이션 관찰&lt;br&gt;속도 조절 연습]
+    E --&gt; F[6. CS Unplugged 접속]
+    F --&gt; G[7. 이진수/탐색 활동 체험]
+    G --&gt; H[8. 두 도구 특징 비교]</div>
+<hr />
+<h2 id="_7">⚠️ 자주 하는 실수<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">실수 1: 사이트 주소를 잘못 입력하는 경우<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p><strong>문제 상황</strong>: <code>visualgo.com</code>이나 <code>csunplugged.com</code>으로 접속</p>
+<p><strong>올바른 해결</strong>:
+- VisuAlgo → <code>visualgo.net</code> (.net입니다!)
+- CS Unplugged → <code>csunplugged.org</code> (.org입니다!)</p>
+<blockquote>
+<p><strong>정리하기:</strong> 사이트 주소의 뒷부분(.com, .net, .org)까지 정확히 입력해야 합니다. 검색엔진에서 사이트 이름으로 검색해도 좋습니다.</p>
+</blockquote>
+<hr />
+<h3 id="2_1">실수 2: 애니메이션이 너무 빨라서 놓치는 경우<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><strong>문제 상황</strong>: 재생 버튼을 눌렀는데 순식간에 끝나버림</p>
+<p><strong>올바른 해결</strong>:
+1. 속도 조절 슬라이더를 <strong>왼쪽 끝</strong>으로 이동 (가장 느리게)
+2. 또는 <strong>Step 버튼</strong>을 사용하여 한 단계씩 진행
+3. 처음부터 다시 보고 싶다면 <strong>Reset</strong> 또는 <strong>Create</strong>로 초기화</p>
+<hr />
+<h3 id="3">실수 3: 영어 때문에 이해가 어려운 경우<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p><strong>문제 상황</strong>: 메뉴나 설명이 영어로 되어있어 어려움</p>
+<p><strong>올바른 해결</strong>:
+- VisuAlgo: 우측 상단에서 <strong>언어를 Korean으로 변경</strong>
+- CS Unplugged: 브라우저의 <strong>번역 기능</strong> 활용 (크롬: 우클릭 → 한국어로 번역)
+- 모르는 단어가 나오면 메모해두고 선생님께 질문!</p>
+<p><strong>자주 나오는 영어 단어</strong></p>
+<ul>
+<li><strong>Sort</strong>: 정렬하다</li>
+<li><strong>Create</strong>: 생성하다</li>
+<li><strong>Random</strong>: 무작위의</li>
+<li><strong>Step</strong>: 단계</li>
+<li><strong>Speed</strong>: 속도</li>
+<li><strong>Pause</strong>: 일시정지</li>
+</ul>
+<hr />
+<h3 id="4">실수 4: 인터넷 연결 문제<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><strong>문제 상황</strong>: 페이지가 로딩되지 않거나 애니메이션이 끊김</p>
+<p><strong>올바른 해결</strong>:
+1. 인터넷 연결 상태 확인
+2. 페이지 새로고침 (F5 또는 Ctrl+R)
+3. 다른 브라우저로 시도 (크롬 권장)
+4. 학교 네트워크에서 차단되었을 수 있음 → 선생님께 문의</p>
+<hr />
+<h2 id="_8">✅ 스스로 점검하기<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>다음 문제를 풀며 이번 시간에 배운 내용을 점검해보세요.</p>
+<h3 id="ox">기본 문제 (O/X 퀴즈)<a class="headerlink" href="#ox" title="Permanent link">&para;</a></h3>
+<p><strong>문제 1</strong>: VisuAlgo에서 정렬 애니메이션을 한 단계씩 진행하려면 Step 버튼을 사용한다.
+- 정답: ⭕</p>
+<p><strong>문제 2</strong>: CS Unplugged는 반드시 컴퓨터가 있어야만 활동할 수 있다.
+- 정답: ❌ (원래 컴퓨터 없이 하는 활동에서 시작됨)</p>
+<p><strong>문제 3</strong>: VisuAlgo의 웹사이트 주소는 visualgo.com이다.
+- 정답: ❌ (visualgo.net이 맞습니다)</p>
+<p><strong>문제 4</strong>: VisuAlgo에서 애니메이션 속도를 조절할 수 있다.
+- 정답: ⭕</p>
+<hr />
+<h3 id="_9">응용 문제<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><strong>문제 5</strong>: VisuAlgo에서 버블 정렬을 실행할 때, 현재 비교 중인 두 요소는 어떻게 표시되나요?</p>
+<ul>
+<li>정답: 노란색(또는 강조 색상)으로 표시됩니다.</li>
+</ul>
+<p><strong>문제 6</strong>: 이진 탐색을 사용하면 1~100 중 숨겨진 숫자를 찾을 때 최대 몇 번 만에 찾을 수 있을까요? (힌트: 매번 절반으로 줄어듭니다)</p>
+<ul>
+<li>정답: 최대 7번 (100 → 50 → 25 → 12 → 6 → 3 → 1~2)</li>
+</ul>
+<hr />
+<h3 id="_10">실습 점검<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>다음 활동을 실제로 수행하고 체크해보세요:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VisuAlgo에 접속하여 메인 화면을 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Sorting 메뉴에서 버블 정렬 애니메이션을 끝까지 실행했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 애니메이션 속도를 조절해보았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Step 버튼으로 한 단계씩 진행해보았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CS Unplugged에 접속하여 하나 이상의 활동을 체험했다</li>
+</ul>
+<hr />
+<h2 id="_11">🚀 더 해보기<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="1_2">도전 과제 1: 다른 정렬 알고리즘 비교하기<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<p>VisuAlgo에서 <strong>삽입 정렬(Insertion Sort)</strong>도 실행해보세요.</p>
+<ol>
+<li>같은 배열(예: 5, 3, 8, 1, 9, 2)로 버블 정렬과 삽입 정렬을 각각 실행</li>
+<li>어떤 차이점이 보이나요?</li>
+<li>교환 횟수나 비교 횟수를 세어볼 수 있나요?</li>
+</ol>
+<h3 id="2-cs-unplugged">도전 과제 2: CS Unplugged 이진수 활동<a class="headerlink" href="#2-cs-unplugged" title="Permanent link">&para;</a></h3>
+<p>CS Unplugged의 <strong>Binary Numbers(이진수)</strong> 활동에서:</p>
+<ol>
+<li>5장의 카드로 0~31까지 숫자 표현해보기</li>
+<li>십진수 19를 이진수로 표현해보기</li>
+<li>이진수 10110을 십진수로 바꿔보기</li>
+</ol>
+<h3 id="3_1">도전 과제 3: 나만의 배열로 실험하기<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>VisuAlgo에서 직접 숫자를 입력하여 실험해보세요:</p>
+<ul>
+<li><strong>이미 정렬된 배열</strong> (1, 2, 3, 4, 5)로 버블 정렬 실행 → 어떻게 되나요?</li>
+<li><strong>역순 배열</strong> (5, 4, 3, 2, 1)로 실행 → 교환이 얼마나 일어나나요?</li>
+<li><strong>중복이 있는 배열</strong> (3, 1, 4, 1, 5, 9, 2, 6)로 실행</li>
+</ul>
+<hr />
+<h2 id="_12">🔗 다음 장으로<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>이번 시간에는 앞으로의 학습에서 계속 사용할 <strong>VisuAlgo</strong>와 <strong>CS Unplugged</strong> 도구의 기본 사용법을 익혔습니다.</p>
+<div class="mermaid">flowchart LR
+    A[이번 시간&lt;br&gt;도구 준비] --&gt; B[다음 시간&lt;br&gt;알고리즘 설계 기초]
+    B --&gt; C[버블 정렬&lt;br&gt;깊이 학습]
+    C --&gt; D[삽입 정렬&lt;br&gt;비교 학습]
+    D --&gt; E[탐색 알고리즘&lt;br&gt;학습]
+
+    style A fill:#90EE90</div>
+<p><strong>다음 시간 예고</strong>: 본격적으로 알고리즘의 개념과 설계 방법을 배웁니다. 문제를 어떻게 분해하고, 해결 절차를 어떻게 설계하는지 알아보겠습니다.</p>
+<blockquote>
+<p><strong>생각해보기:</strong> 오늘 체험한 버블 정렬에서 숫자들이 어떤 규칙으로 움직였는지 기억나나요? 다음 시간에 그 원리를 자세히 배울 예정입니다!</p>
+</blockquote>
+<hr />
+<h2 id="_13">📌 핵심 개념 요약<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><strong>이번 장에서 꼭 기억해야 할 것들</strong></p>
+<ul>
+<li>
+<p><strong>언플러그드 활동</strong>: 컴퓨터 과학 원리를 물리적 도구나 웹 인터랙티브로 체험하는 학습 방법</p>
+</li>
+<li>
+<p><strong>VisuAlgo</strong>: 알고리즘 실행 과정을 애니메이션으로 보여주는 시각화 도구 (visualgo.net)</p>
+</li>
+<li>
+<p><strong>CS Unplugged</strong>: 게임과 활동으로 컴퓨터 과학 핵심 개념을 배우는 교육 프로젝트 (csunplugged.org)</p>
+</li>
+<li>
+<p><strong>시각화 도구의 장점</strong>: 추상적인 알고리즘을 눈으로 확인하고 손으로 조작하며 깊이 이해할 수 있음</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>
